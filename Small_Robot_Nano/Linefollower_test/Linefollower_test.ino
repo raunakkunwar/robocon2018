@@ -10,22 +10,7 @@ void setup() {
   Serial.begin(9600);
 
 }
-
-void loop() {
-  // put your main code here, to run repeatedly:
-  int s1 = analogRead(A7);
-  int s2 = analogRead(A6);
-  int s3 = analogRead(A5);
-  Serial.print(s1);
-  Serial.print(" ");
-  Serial.print(s2);
-  Serial.print(" ");
-  Serial.print(s3);
-  Serial.println(" ");  
-  int threshold = (s1+s2+s3)/3;
-  Serial.print("Threshold = ");
-  Serial.println(threshold);
-  if (s1 > threshold && s2 < threshold && s3 < threshold) {
+0old && s2 < threshold && s3 < threshold) {
     Serial.println("1");
   }
   else if (s1 < threshold && s2 > threshold && s3 < threshold) {
